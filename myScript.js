@@ -11,3 +11,5 @@ for (i = 0; i < rows.length; i++)
         rows[j].appendChild(newCell).className = 'cell';
     }
 
+
+    

@@ -1,0 +1,11 @@
+.row{
+    display: flex;
+    justify-content: center;
+}
+.coll{
+    display: flex;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    margin: 1px;
+}

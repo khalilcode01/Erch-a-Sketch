@@ -1,5 +1,21 @@
 let container = document.querySelector('.container');
-function makeGrid(coll, row){
+let interface = document.querySelector('.interface');
+let button = document.createElement('button');
+interface.appendChild(button);
+button.addEventListener('click',() =>{
+    let value = prompt('Add value', '16');
+    removeGrid();
+    makeGrid(value);
+    
+    let div = document.getElementsByClassName('coll');
+    for(let i = 0; i < div.length; i++) {
+    div[i].addEventListener("mouseover", function() {
+        div[i].setAttribute('style', 'background-color: black;')
+    })
+    }
+
+})
+function makeGrid(coll) {
     for(i = 0; i < coll; i++){
         let row = document.createElement('div');
         row.setAttribute('class', 'row');
@@ -11,10 +27,9 @@ function makeGrid(coll, row){
         }
     }
 }
-makeGrid(4,4);
-let div = document.getElementsByClassName('coll');
-for(let i = 0; i < div.length; i++) {
-  div[i].addEventListener("mouseover", function() {
-    div[i].setAttribute('style', 'background-color: black;')
-  })
+function removeGrid() {
+    let remover = document.querySelectorAll('.row');
+    for(i = 0; i < remover.length; i++){
+        container.removeChild(remover[i]);
+    }
 }

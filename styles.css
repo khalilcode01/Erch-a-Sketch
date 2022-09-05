@@ -2,17 +2,36 @@ html,
 body {
   height: 100%;
   margin: 0;
+  background-color: grey;
 }
-
+.interface{
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+  margin-bottom: -10px;
+}
+.title{
+  
+  font-size: 30px;
+}
 .coll,
 .row{
-    height: 100px;
-    width: 100px;
-    background-color: red;
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border: solid 1px white;
     
 }
 .container{
     display: flex;
-    height: 100%;
-    width: 100%;
+    justify-content: center;
+    
+}
+button{
+  background-color: rgba(138, 97, 233, 0.658);
+  border-radius: 12%;
+  border: 0px;
+
 }
